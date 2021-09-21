@@ -47,7 +47,7 @@ def max_level(limit, monster):
     for x in range(102, 2, -1):
         x = (x * 0.5)
         if calculate_cp(monster, 0, 0, 0, x) <= limit:
-            return min(x + 1, 50)
+            return min(x + 1, 51)
 
 
 def min_level(limit, monster):
