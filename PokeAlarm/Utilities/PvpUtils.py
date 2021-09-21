@@ -16,7 +16,7 @@ def calculate_cp(monster, atk, de, sta, lvl):
 
 
 def max_cp(monster):
-    return calculate_cp(monster, 15, 15, 15, 50)
+    return calculate_cp(monster, 15, 15, 15, 51)
 
 
 def pokemon_rating(limit, monster, atk, de, sta, min_level, max_level):
@@ -43,8 +43,8 @@ def pokemon_rating(limit, monster, atk, de, sta, min_level, max_level):
 
 def max_level(limit, monster):
     if not max_cp(monster) > limit:
-        return float(50)
-    for x in range(100, 2, -1):
+        return float(51)
+    for x in range(102, 2, -1):
         x = (x * 0.5)
         if calculate_cp(monster, 0, 0, 0, x) <= limit:
             return min(x + 1, 50)
@@ -52,8 +52,8 @@ def max_level(limit, monster):
 
 def min_level(limit, monster):
     if not max_cp(monster) > limit:
-        return float(50)
-    for x in range(100, 2, -1):
+        return float(51)
+    for x in range(102, 2, -1):
         x = (x * 0.5)
         if calculate_cp(monster, 15, 15, 15, x) <= limit:
             return max(x - 1, 1)
